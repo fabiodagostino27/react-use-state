@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ButtonsList } from "./buttons/ButtonsList";
 
 export const Main = (props) => {
-    const [currentId, setCurrentId] = useState(1);
+    const [currentId, setCurrentId] = useState(0);
     const languages = props.languages;
     const {description} = languages;
 
@@ -10,7 +10,7 @@ export const Main = (props) => {
     return (
         <div className="container mt-3">
             <div>
-                <ButtonsList languages={languages}/>
+                <ButtonsList languages={languages} currentId={currentId} setCurrentId={setCurrentId}/>
             </div>
             <p>
                 {!currentObject ? "Nessun linguaggio selezionato" : currentObject.description}

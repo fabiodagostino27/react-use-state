@@ -9,7 +9,7 @@ export const ButtonsList = (props) => {
                     const {id, title} = element;
 
                     return (
-                        <Button key={id} title={title}/>
+                        <Button key={id} id={id} title={title} currentId={props.currentId} setCurrentId={props.setCurrentId}/>
                     )
                 })
             }
