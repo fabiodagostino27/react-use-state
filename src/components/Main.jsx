@@ -12,9 +12,10 @@ export const Main = (props) => {
             <div>
                 <ButtonsList languages={languages} currentId={currentId} setCurrentId={setCurrentId}/>
             </div>
-            <p>
-                {!currentObject ? "Nessun linguaggio selezionato" : currentObject.description}
-            </p>
+            <div className="my-4 p-3 border border-secondary-subtle rounded">
+                <h3>{!currentObject ? "Seleziona un linguaggio" : currentObject.title}</h3>
+                <p>{!currentObject ? "Nessun linguaggio selezionato" : currentObject.description}</p>
+            </div>
         </div>
     )
 }

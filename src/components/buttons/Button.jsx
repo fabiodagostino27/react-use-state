@@ -3,6 +3,6 @@ export const Button = (props) => {
     let setCurrentId = props.setCurrentId;
 
     return (
-        <button className="btn btn-primary me-2" onClick={() => setCurrentId(currentId = props.id)}>{props.title}</button>
+        <button className={`btn me-2 ${(currentId === props.id) ? "btn-warning" : "btn-primary"}`} onClick={() => setCurrentId(currentId = props.id)}>{props.title}</button>
     )
 }
