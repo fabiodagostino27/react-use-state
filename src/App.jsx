@@ -1,9 +1,10 @@
 import { languages } from "./data/languages";
+import { Header } from "./components/Header";
 
 function App() {
     return (
         <>
-
+            <Header />
         </>
     )
 }
